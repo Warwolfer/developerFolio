@@ -14,10 +14,10 @@ COPY package.json ./
 RUN apk add --no-cache git
 
 # Install any needed packages
-RUN npm install
+RUN pnpm install
 
 # Audit fix npm packages
-RUN npm audit fix
+RUN pnpm audit fix
 
 # Bundle app source
 COPY . /app
@@ -26,4 +26,4 @@ COPY . /app
 EXPOSE 3000
 
 # Run app.js when the container launches
-CMD ["npm", "start"]
+CMD ["pnpm", "start"]

@@ -85,10 +85,10 @@ cp env.example .env
 copy env.example .env
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start a local dev server
-npm start
+pnpm start
 ```
 
 ## Linking Portfolio to GitHub
