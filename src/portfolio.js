@@ -3,14 +3,11 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-
 // Splash Screen
 
 const splashScreen = {
   enabled: true, // set false to disable splash screen
-  animation: splashAnimation,
-  duration: 1000 // Set animation duration as per your animation
+  duration: 4000 // Set duration for Three.js D20 animation
 };
 
 // Summary And Greeting Section
@@ -23,7 +20,7 @@ const greeting = {
   username: "Kenny Reynaldo",
   title: "Hi, I'm Kenny",
   subTitle: emoji(
-    "A Full Stack Software Developer 🚀 having an experience of building Backend, Web, and Mobile applications with JavaScript / Nodejs / Vue / Astro and a whole lot of other libraries and frameworks."
+    "A Full Stack Software Developer having an experience of building Backend, Web, and Mobile applications with JavaScript / Nodejs / Vue / Astro and a whole lot of other libraries and frameworks."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1atU3_Shcn11wjmV9PY4UBWcdL4JEK4mU/view?usp=sharing", // Set to empty to hide the button
@@ -44,18 +41,21 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "Full stack developer with experience and drive to learn every tech stacks",
+  title: "Mystical Abilities",
+  subTitle:
+    "A digital sorcerer wielding arcane knowledge across realms of technology",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications (PWA) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Optimized and flexible backend applications with reliable database structure"
+      "⚡ Craft enchanting user interfaces that captivate and guide adventurers through digital realms"
     ),
     emoji(
-      "⚡ Integration of third party services such as Firebase/Digital Ocean"
+      "⚡ Weave Progressive Web Applications with the power of ancient SPA magics"
+    ),
+    emoji(
+      "⚡ Forge resilient backend strongholds with crystalline database architectures"
+    ),
+    emoji(
+      "⚡ Channel third-party energies from mystical clouds like Firebase and Digital Ocean"
     )
   ],
 
@@ -94,7 +94,7 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "ruby on rails",
       fontAwesomeClassname: "fas fa-gem"
-    },
+    }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -114,7 +114,7 @@ const educationInfo = {
         // "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         // "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
       ]
-    },
+    }
   ]
 };
 
@@ -124,15 +124,15 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
+      Stack: "Frontend Enchantment", //Insert stack or technology you have experience in
       progressPercentage: "70%" //Insert relative proficiency in percentage
     },
     {
-      Stack: "Backend",
+      Stack: "Backend Mastery",
       progressPercentage: "80%"
     },
     {
-      Stack: "Programming",
+      Stack: "Arcane Coding",
       progressPercentage: "80%"
     }
   ],
@@ -145,7 +145,7 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Backend Engineer",
+      role: "Backend Architect",
       company: "Happy5",
       companylogo: require("./assets/images/happy5.webp"),
       date: "December 2021 – Present",
@@ -156,7 +156,7 @@ const workExperiences = {
       ]
     },
     {
-      role: "Mobile Developer",
+      role: "Mobile Artificer",
       company: "WIT.ID",
       companylogo: require("./assets/images/wit.png"),
       date: "October 2019 – January 2021",
@@ -167,7 +167,7 @@ const workExperiences = {
       ]
     },
     {
-      role: "Full Stack Developer",
+      role: "Full Stack Wizard",
       company: "Sunwell System",
       companylogo: require("./assets/images/sunwell.png"),
       date: "September 2018 – October 2019",
@@ -191,8 +191,8 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "Companies and Projects that I worked with",
+  title: "Legendary Quests",
+  subtitle: "Epic adventures and artifacts forged in collaboration",
   projects: [
     {
       image: require("./assets/images/sonstream.jpg"),
@@ -205,7 +205,7 @@ const bigProjects = {
         }
         //  you can add extra buttons here.
       ]
-    },
+    }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -214,20 +214,17 @@ const bigProjects = {
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "",
+  title: emoji("Sacred Scrolls & Honors 🏆 "),
+  subtitle: "",
 
   achievementsCards: [
     {
       title: "Scrum Master Certification",
-      subtitle:
-        "Certified Indonesia Scrum Master I by Ekipa.co",
+      subtitle: "Certified Indonesia Scrum Master I by Ekipa.co",
       image: require("./assets/images/ekipa.webp"),
       imageAlt: "Ekipa Logo",
-      footerLink: [
-      ]
-    },
+      footerLink: []
+    }
   ],
   display: true // Set false to hide this section, defaults to true
 };

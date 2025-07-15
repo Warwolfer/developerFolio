@@ -1,7 +1,132 @@
 @import "../_globalColor";
 
-.dark-mode {
-  background-color: $darkBackground;
-  color: white;
-  transition: "0.1s";
+// Dungeon Theme - Dark by default
+body {
+  background: linear-gradient(
+    135deg,
+    $dungeonBg1 0%,
+    $dungeonBg2 30%,
+    $dungeonBg3 70%,
+    $dungeonBg4 100%
+  );
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  color: $dungeonTextSecondary;
+  overflow-x: hidden;
+}
+
+.dungeon-theme {
+  background: linear-gradient(
+    135deg,
+    $dungeonBg1 0%,
+    $dungeonBg2 30%,
+    $dungeonBg3 70%,
+    $dungeonBg4 100%
+  );
+  min-height: 100vh;
+  color: $dungeonTextSecondary;
+  transition: all 0.3s ease;
+
+  // Global text styling for BG3 theme
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $dungeonTextPrimary;
+    font-family: $headerFont;
+    font-weight: 600;
+  }
+
+  p,
+  span,
+  div {
+    color: $dungeonTextSecondary;
+    font-family: $bodyFont;
+  }
+
+  // Override body font for better readability
+  body {
+    font-family: $bodyFont;
+  }
+
+  // Greeting section
+  .greeting-text {
+    color: $dungeonTextPrimary !important;
+    text-shadow: 2px 2px 4px rgba(26, 22, 37, 0.6);
+  }
+
+  .greeting-text-p {
+    color: $dungeonTextSecondary !important;
+  }
+
+  // Skills section
+  .skills-heading {
+    color: $dungeonTextPrimary !important;
+    text-shadow: 1px 1px 3px rgba(26, 22, 37, 0.8);
+  }
+
+  // Contact section
+  .contact-title {
+    color: $dungeonTextPrimary !important;
+  }
+
+  .contact-detail {
+    color: $dungeonTextSecondary !important;
+  }
+
+  // Education and experience cards
+  .education-text,
+  .experience-text,
+  .experience-text-role,
+  .experience-text-date,
+  .experience-text-company {
+    color: $dungeonTextSecondary !important;
+  }
+
+  // Subtitles and muted text
+  .subTitle {
+    color: $dungeonTextMuted !important;
+  }
+
+  // Project and achievement cards
+  .project-title {
+    color: $dungeonTextPrimary !important;
+  }
+
+  .achievement-text {
+    color: $dungeonTextSecondary !important;
+  }
+
+  // Blog cards
+  .blog-container .description {
+    color: $dungeonTextSecondary !important;
+  }
+
+  // Progress bars and tech stack
+  .progress-header {
+    color: $dungeonTextPrimary !important;
+  }
+
+  // Card titles
+  .card-title,
+  .repo-name-div {
+    color: $dungeonTextPrimary !important;
+  }
+
+  // Footer
+  .footer-text {
+    color: $dungeonTextMuted !important;
+  }
+
+  // Links
+  a {
+    color: $mysticGold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $mysticGoldHover;
+    }
+  }
 }

@@ -5,26 +5,62 @@
   max-height: 100px;
 }
 
-/* header */
-
-.dark-menu {
-  background-color: $darkBackground !important;
-  color: $textColorDark;
+/* Dungeon Header */
+.dungeon-header {
+  background: linear-gradient(
+    135deg,
+    $dungeonBg1 0%,
+    $dungeonBg2 100%
+  ) !important;
+  color: $dungeonTextPrimary;
+  box-shadow: 0 2px 12px rgba(26, 22, 37, 0.6);
+  border-bottom: 2px solid $mysticGold;
+  backdrop-filter: blur(10px);
 }
 
-.dark-menu li a {
-  color: $textColorDark !important;
+.dungeon-menu li a {
+  color: $dungeonTextSecondary !important;
+  transition: all 0.3s ease;
+  font-family: $headerFont !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  font-size: 0.9em !important;
+  position: relative !important;
+  border-radius: 6px !important;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, $mysticGoldDark, $mysticGold, $mysticGoldDark);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  &:hover::before {
+    width: 80%;
+  }
 }
 
-.dark-menu li a:hover {
-  background-color: $buttonColor !important;
+.dungeon-menu li a:hover {
+  background: linear-gradient(135deg, rgba(47, 47, 47, 0.3), rgba(36, 36, 36, 0.5)) !important;
+  color: $mysticGold !important;
+  text-shadow: 1px 1px 3px rgba(13, 13, 13, 0.8) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(251, 206, 160, 0.2) !important;
 }
 
 .header {
-  background-color: $lightBackground1;
+  background: linear-gradient(135deg, $dungeonBg1 0%, $dungeonBg2 100%);
   max-width: 100%;
   padding: 15px 20px;
   margin: 0px auto;
+  box-shadow: 0 2px 12px rgba(26, 22, 37, 0.6);
+  border-bottom: 2px solid $mysticGold;
 }
 
 .header ul {
@@ -35,37 +71,111 @@
 }
 
 .grey-color {
-  color: $subTitle;
+  color: $mysticGoldDark;
+  font-family: $headerFont;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(13, 13, 13, 0.8);
+  transition: all 0.3s ease;
+  
+  .logo:hover & {
+    color: $mysticGold;
+    text-shadow: 0 0 8px rgba(251, 206, 160, 0.8);
+  }
 }
 
 .header li a {
   display: block;
   padding: 15px 20px;
-  color: $textColor;
+  color: $dungeonTextSecondary;
   text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: $headerFont;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  position: relative;
+  border-radius: 6px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, $mysticGoldDark, $mysticGold, $mysticGoldDark);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  &:hover::before {
+    width: 80%;
+  }
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: $headerHoverBG;
+  background: linear-gradient(135deg, rgba(47, 47, 47, 0.3), rgba(36, 36, 36, 0.5));
+  color: $mysticGold;
+  text-shadow: 1px 1px 3px rgba(13, 13, 13, 0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(251, 206, 160, 0.2);
 }
 
 .header .logo {
   display: block;
   flex: none;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
+  color: $dungeonTextPrimary;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px rgba(251, 206, 160, 0.6);
+  }
 }
 
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
+  font-family: $headerFont;
+  font-weight: 600;
+  color: $mysticGold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;
+  text-shadow: 2px 2px 4px rgba(13, 13, 13, 0.8);
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, $mysticGold 0%, $mysticGoldDark 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $mysticGold, transparent);
+    opacity: 0.7;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 8px;
+    right: 8px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $mysticGoldDark, transparent);
+    opacity: 0.5;
+  }
 }
 
 /* menu */
@@ -88,7 +198,7 @@
 }
 
 .header .menu-icon .navicon {
-  background: $iconBackground;
+  background: $mysticGold;
   display: block;
   height: 2px;
   position: relative;
@@ -96,13 +206,13 @@
   width: 18px;
 }
 
-.header .menu-icon .navicon-dark {
-  background: $textColorDark;
+.header .menu-icon .navicon-dungeon {
+  background: $mysticGold;
 }
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: $iconBackground;
+  background: $mysticGold;
   content: "";
   display: block;
   height: 100%;

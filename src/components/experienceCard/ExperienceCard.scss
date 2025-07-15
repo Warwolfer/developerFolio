@@ -4,16 +4,22 @@
   position: relative;
   background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  border-radius: 12px;
+  border: 2px solid $lightBorder1;
+  background: linear-gradient(
+    135deg,
+    $lightBackground2 0%,
+    $lightBackground3 100%
+  );
 }
 
 .experience-card-dark {
   position: relative;
   background-color: $darkBackground;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  border-radius: 12px;
+  border: 2px solid $buttonColor;
+  background: linear-gradient(135deg, $darkBackground 0%, #4c3a81 100%);
 }
 
 .experience-card:hover {

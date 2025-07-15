@@ -1,81 +1,99 @@
-/* Change colors in this file to style to your needs on a global level. 
-Certain colors are used for different and multiply types of elements. 
-For greater control over colors visit each components .scss file. */
+/* Baldur's Gate 3 Theme - Rich dark fantasy color palette */
 
-// button colors
-$buttonColor: #55198b;
-$buttonHover: #8c43ce;
-$topButtonHover: #000;
+// Primary dark BG3 colors - softened
+$dungeonPrimary: #0d0d0d;
+$dungeonSecondary: #171717;
+$dungeonTertiary: #242424;
+$dungeonAccent: #2f2f2f;
 
-// text colors light theme
-$titleColor: #000000;
-$textColor: #000000;
-$subTitle: #868e96;
-$cardSubtitle: #666666;
-$talkCardSubTitle: #7f8287;
-$blogCardTitleColor: #262626;
+// Gold/bronze accents inspired by BG3
+$mysticGold: #FBCEA0;
+$mysticGoldHover: #FFFFFF;
+$mysticGoldDark: #C19976;
 
-// text color dark theme
-$textColorDark: #ffffff;
+// Text colors for BG3 theme
+$dungeonTextPrimary: #FFFFFF;
+$dungeonTextSecondary: #FBCEA0;
+$dungeonTextMuted: #C19976;
+$dungeonTextAccent: #B78F6D;
 
-// toggle switch colors
-$toggleCheck: #2196f3;
-$toggleSwitchSliderBG: #ccc;
+// Background colors - softened dark grays
+$dungeonBg1: #0d0d0d;
+$dungeonBg2: #171717;
+$dungeonBg3: #242424;
+$dungeonBg4: #2f2f2f;
 
-// githubRepo specific colors
-$githubRepoCardLanguageColorBG: #0000ff;
-$githubRepoCardColor: rgb(88, 96, 105);
-$githubRepoCardRepoCardStatsColor: rgb(106, 115, 125);
-$githubRepoCardRepoNameColor: rgb(36, 41, 46);
-$githubProfileCardLocationTS: #ffebcd;
-$githubProfileCardBorder: #6c63ff;
+// Button colors
+$buttonColor: $mysticGold;
+$buttonHover: $mysticGoldHover;
+$topButtonHover: $dungeonPrimary;
 
-// light background colors
-$lightBackground1: #fff;
-$lightBackground2: rgb(255, 255, 255);
-$lightBackground3: #f5f2f4;
-$blogCardContainerColor: #586069;
-// dark background colors
-$darkBackground: #171c28;
+// Text colors (now dark theme by default)
+$titleColor: $dungeonTextPrimary;
+$textColor: $dungeonTextSecondary;
+$subTitle: $dungeonTextMuted;
+$cardSubtitle: $dungeonTextMuted;
+$talkCardSubTitle: $dungeonTextMuted;
+$blogCardTitleColor: $dungeonTextPrimary;
+$textColorDark: $dungeonTextPrimary;
 
-// light theme box shadows
-$lightBoxShadowDark: rgba(0, 0, 0, 0.2);
-$lightBoxShadow: rgba(0, 0, 0, 0.1);
-$lightBoxShadowDarker: rgba(0, 0, 0, 0.3);
+// GitHub specific colors
+$githubRepoCardLanguageColorBG: #722f37;
+$githubRepoCardColor: $dungeonTextMuted;
+$githubRepoCardRepoCardStatsColor: $dungeonTextMuted;
+$githubRepoCardRepoNameColor: $dungeonTextPrimary;
+$githubProfileCardLocationTS: $dungeonTextAccent;
+$githubProfileCardBorder: $mysticGold;
 
-// dark theme box shadows
-$darkBoxShadow: #d9dbdf;
-$darkBoxShadow2: #ffffff;
+// Background colors (dark by default)
+$lightBackground1: $dungeonBg1;
+$lightBackground2: $dungeonBg2;
+$lightBackground3: $dungeonBg3;
+$blogCardContainerColor: $dungeonSecondary;
+$darkBackground: $dungeonPrimary;
 
-// linear gradients
+// Box shadows for BG3 theme
+$lightBoxShadowDark: rgba(0, 0, 0, 0.6);
+$lightBoxShadow: rgba(0, 0, 0, 0.35);
+$lightBoxShadowDarker: rgba(0, 0, 0, 0.8);
+
+$darkBoxShadow: $mysticGold;
+$darkBoxShadow2: $dungeonTextAccent;
+
+// Linear gradients for BG3 atmosphere
 $experienceCardBlurredDivLG: linear-gradient(
-  rgba(0, 0, 0, 0.4),
-  rgba(0, 0, 0, 0.2)
+  rgba(13, 13, 13, 0.8),
+  rgba(23, 23, 23, 0.6)
 );
 $experienceCardBannerLG: linear-gradient(
-  rgba(0, 0, 0, 0.7),
-  rgba(0, 0, 0, 0.5)
+  rgba(13, 13, 13, 0.9),
+  rgba(36, 36, 36, 0.7)
 );
 
-// borders
-$progressBarBackground: rgb(243, 239, 239);
-$lightBorder1: rgba(211, 211, 211, 0.397);
-$educationCardBorder: #a9a7f9;
+// Borders
+$progressBarBackground: $dungeonBg3;
+$lightBorder1: rgba(251, 206, 160, 0.3);
+$educationCardBorder: $mysticGold;
 
-// hovers
-$achievementCertificateCardHoverDark: rgba(255, 255, 255, 0.2);
-$blogCardHoverSmallColor: rgba(255, 255, 255, 0.8);
-$headerHoverBG: #f4f4f4;
-$contactDetailHoverTS: #b5b5b5;
+// Hover effects
+$achievementCertificateCardHoverDark: rgba(251, 206, 160, 0.3);
+$blogCardHoverSmallColor: rgba(255, 255, 255, 0.9);
+$headerHoverBG: $dungeonBg3;
+$contactDetailHoverTS: $mysticGoldHover;
 
-// misc backgrounds
-$progressBarSpanBG: #aaa5ff;
-$iconBackground: #333;
-$appHeaderBG: #282c34;
+// Misc backgrounds
+$progressBarSpanBG: $mysticGold;
+$iconBackground: $dungeonSecondary;
+$appHeaderBG: $dungeonBg1;
 
-// misc colors
-$skillsColor: #645beb;
-$appLink: #09d3ac;
+// Misc colors
+$skillsColor: $mysticGoldDark;
+$appLink: $mysticGold;
+
+// Font families for BG3/DnD theme
+$headerFont: 'Cinzel', serif;
+$bodyFont: 'EB Garamond', serif;
+$fallbackFont: 'Agustina Regular', 'Montserrat', sans-serif;
 
 // social media icons
 $faceBook: #3b5998;

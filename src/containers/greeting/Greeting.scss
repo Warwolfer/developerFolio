@@ -46,6 +46,8 @@
   font-size: 70px;
   line-height: 1.1;
   color: $textColor !important;
+  text-shadow: 2px 2px 4px rgba(45, 27, 105, 0.3);
+  font-weight: 600;
 }
 
 .greeting-text-p {
@@ -53,9 +55,41 @@
   line-height: 40px;
 }
 
+// Dark mode specific overrides
+.dark-mode .greeting-text-p {
+  color: $textColorDark !important;
+}
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .greeting-image-div > img {
   max-width: 100%;
   height: auto;
+}
+
+/* Lottie animation sizing for greeting */
+.greeting-image-div > div {
+  max-width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-image-div svg {
+  max-width: 70% !important;
+  height: auto !important;
 }
 
 .wave-emoji {
@@ -117,6 +151,15 @@
   }
   .greeting-image-div {
     height: 256px;
+  }
+  
+  /* Mobile Lottie sizing for greeting */
+  .greeting-image-div > div {
+    max-width: 85%;
+  }
+  
+  .greeting-image-div svg {
+    max-width: 85% !important;
   }
 }
 
