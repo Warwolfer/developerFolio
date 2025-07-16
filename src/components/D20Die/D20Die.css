@@ -2,17 +2,183 @@
   width: 100%;
   height: 300px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: transparent;
 }
 
-.d20-canvas {
-  width: 100%;
-  height: 100%;
+.d20-three-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Glow effect for the die */
-.d20-container canvas {
-  filter: drop-shadow(0 0 20px rgba(251, 206, 160, 0.3));
+.d20-mount {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d20-mount canvas {
+  border-radius: 15px;
+  background: transparent !important;
+  filter: drop-shadow(0 0 20px rgba(183, 143, 109, 0.6));
+}
+
+.d20-number-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #FBCEA0;
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.8),
+    0 0 15px rgba(251, 206, 160, 0.8);
+  z-index: 10;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid #B78F6D;
+  backdrop-filter: blur(5px);
+  animation: numberPulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes numberPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.8),
+      0 0 15px rgba(251, 206, 160, 0.8);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.05);
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.8),
+      0 0 20px rgba(251, 206, 160, 1);
+  }
+}
+
+.roll-result {
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeInResult 1s ease-in-out;
+}
+
+@keyframes fadeInResult {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FBCEA0;
+  font-family: 'Cinzel', serif;
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.8),
+    0 0 20px rgba(251, 206, 160, 0.6);
+  margin-bottom: 8px;
+  animation: winningNumberGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes winningNumberGlow {
+  0% {
+    color: #FBCEA0;
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.8),
+      0 0 20px rgba(251, 206, 160, 0.6);
+  }
+  100% {
+    color: #FFD700;
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.8),
+      0 0 30px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.result-text {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  font-family: 'Cinzel', serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  letter-spacing: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .d20-three-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .d20-mount {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .d20-number-overlay {
+    font-size: 1.5rem;
+    padding: 6px 10px;
+  }
+  
+  .result-number {
+    font-size: 2rem;
+  }
+  
+  .result-text {
+    font-size: 1rem;
+  }
+}
+
+/* Add special glow effect for the Three.js canvas */
+.d20-mount canvas {
+  transition: filter 0.5s ease;
+}
+
+.d20-three-container:hover .d20-mount canvas {
+  filter: drop-shadow(0 0 25px rgba(183, 143, 109, 0.8));
+}
+
+/* Add subtle animation to the container */
+.d20-three-container {
+  animation: containerFloat 3s ease-in-out infinite;
+}
+
+@keyframes containerFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Style for when the die is settled */
+.d20-three-container.settled {
+  animation: settledGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes settledGlow {
+  0% {
+    filter: drop-shadow(0 0 15px rgba(183, 143, 109, 0.4));
+  }
+  100% {
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
+  }
 }

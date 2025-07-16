@@ -16,11 +16,6 @@ export default function SplashScreen() {
       <div className="splash-animation-container">
         <D20Die onRollComplete={handleRollComplete} />
       </div>
-      <div className="splash-title-container">
-        <span className="grey-color"> &lt;</span>
-        <span className="splash-title">{greeting.username}</span>
-        <span className="grey-color">/&gt;</span>
-      </div>
     </div>
   );
 }
